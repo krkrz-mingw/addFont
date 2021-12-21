@@ -9,6 +9,7 @@ on:
       - "**.build"
       - "**.in"
       - "**.yml"
+      - "Makefile"
   pull_request:
     paths:
       - "**.c"
@@ -18,6 +19,7 @@ on:
       - "**.build"
       - "**.in"
       - "**.yml"
+      - "Makefile"
 
 jobs:
   build-win32-gcc:
