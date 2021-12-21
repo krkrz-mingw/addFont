@@ -36,7 +36,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: binary-win32-${{ matrix.target_arch }}-gcc
-          path: ./**.${{ matrix.target_arch }}.7z
+          path: ./**.${{ matrix.target_arch }}.gcc.7z
 
   create-release:
     needs: [build-win32-gcc]
