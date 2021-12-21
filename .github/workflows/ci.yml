@@ -107,9 +107,9 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: "${{ contains(github.ref, '-rc') }}"
         files: |
-          binary-win32-intel32-gcc/*
-          binary-win32-intel64-gcc/*
-          binary-win32-intel32-clang/*
-          binary-win32-intel64-clang/*
-          binary-win32-arm32-clang/*
-          binary-win32-arm64-clang/*
+          binary-win32-intel32-gcc/**.7z
+          binary-win32-intel64-gcc/**.7z
+          binary-win32-intel32-clang/**.7z
+          binary-win32-intel64-clang/**.7z
+          binary-win32-arm32-clang/**.7z
+          binary-win32-arm64-clang/**.7z
