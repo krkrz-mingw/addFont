@@ -10,7 +10,7 @@
 
 #include <windows.h>
 #include <wingdi.h>
-#include "ncbind/ncbind.hpp"
+#include "ncbind.hpp"
 
 #include <vector>
 using namespace std;
