@@ -90,7 +90,7 @@
       "steps" : [
         {
           "name" : "Fix user and group",
-          "run" : "sudo groupadd -g 123 runner\nsudo useradd runner -u 1001 -g 123 -m -s /bin/bash\nsudo usermod -a -G runner linuxbrew"
+          "run" : "sudo chown linuxbrew:linuxbrew . ~"
         },
         {
           "name" : "Listing",
