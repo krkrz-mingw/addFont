@@ -30,7 +30,8 @@
     "build-win32" : {
       "runs-on" : "ubuntu-latest",
       "container" : {
-        "image" : "homebrew/ubuntu18.04:latest"
+        "image" : "homebrew/ubuntu18.04:latest",
+        "options" : "--user 1001:123"
       },
       "defaults" : {
         "run" : {
@@ -89,8 +90,8 @@
       },
       "steps" : [
         {
-          "name" : "Allow access to home and workspace directory",
-          "run" : "sudo chmod 777 ~ ."
+          "name" : "Fix user and group",
+          "run" : "sudo groupadd -g 123 runner\nsudo useradd runner -u 1001 -g 123 -m -s /bin/bash\nsudo usermod -a -G linuxbrew runner"
         },
         {
           "name" : "Listing",
