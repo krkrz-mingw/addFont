@@ -30,8 +30,7 @@
     "build-win32" : {
       "runs-on" : "ubuntu-latest",
       "container" : {
-        "image" : "homebrew/ubuntu18.04:latest",
-        "options" : "--user 1001:123"
+        "image" : "homebrew/ubuntu18.04:latest"
       },
       "defaults" : {
         "run" : {
@@ -91,7 +90,7 @@
       "steps" : [
         {
           "name" : "Fix user and group",
-          "run" : "sudo groupadd -g 123 runner\nsudo useradd runner -u 1001 -g 123 -m -s /bin/bash\nsudo usermod -a -G linuxbrew runner"
+          "run" : "sudo groupadd -g 123 runner\nsudo useradd runner -u 1001 -g 123 -m -s /bin/bash\nsudo usermod -a -G runner linuxbrew"
         },
         {
           "name" : "Listing",
