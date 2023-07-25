@@ -87,8 +87,8 @@
       },
       "steps" : [
         {
-          "name" : "Allow access to home directory",
-          "run" : "sudo chmod 777 ~"
+          "name" : "Allow access to home and workspace directory",
+          "run" : "sudo chmod 777 ~ ."
         },
         {
           "name" : "Set up default base tools",
