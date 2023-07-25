@@ -87,6 +87,10 @@
       },
       "steps" : [
         {
+          "name" : "Allow access to home directory",
+          "run" : "chmod 777 ~"
+        },
+        {
           "name" : "Set up default base tools",
           "run" : "brew install curl xz node git"
         },
