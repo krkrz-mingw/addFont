@@ -88,7 +88,7 @@
       "steps" : [
         {
           "name" : "Allow access to home directory",
-          "run" : "chmod 777 ~"
+          "run" : "sudo chmod 777 ~"
         },
         {
           "name" : "Set up default base tools",
