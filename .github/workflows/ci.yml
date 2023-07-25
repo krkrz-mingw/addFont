@@ -89,8 +89,8 @@
       },
       "steps" : [
         {
-          "name" : "Fix user and group",
-          "run" : "sudo chown -R linuxbrew:linuxbrew . ~ $RUNNER_TEMP"
+          "name" : "Fix perms",
+          "run" : "sudo chmod -R 777 . ~ $RUNNER_TEMP"
         },
         {
           "name" : "Listing",
