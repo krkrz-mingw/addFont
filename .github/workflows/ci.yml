@@ -30,8 +30,7 @@
     "build-win32" : {
       "runs-on" : "ubuntu-latest",
       "container" : {
-        "image" : "homebrew/ubuntu18.04:latest",
-        "options" : "--user 1001"
+        "image" : "homebrew/ubuntu18.04:latest"
       },
       "defaults" : {
         "run" : {
@@ -89,6 +88,14 @@
         "CMAKE_GENERATOR" : "Ninja"
       },
       "steps" : [
+        {
+          "name" : "Allow access to home and workspace directory",
+          "run" : "sudo chmod 777 ~ ."
+        },
+        {
+          "name" : "Listing",
+          "run" : "ls -la .\nls -la ~\n"
+        },
         {
           "name" : "Set up default base tools",
           "run" : "brew install curl xz node git"
