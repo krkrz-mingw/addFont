@@ -90,7 +90,7 @@
       "steps" : [
         {
           "name" : "Fix user and group",
-          "run" : "sudo chown linuxbrew:linuxbrew . ~"
+          "run" : "sudo chown -R linuxbrew:linuxbrew . ~ $RUNNER_TEMP"
         },
         {
           "name" : "Listing",
