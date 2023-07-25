@@ -94,7 +94,7 @@
         },
         {
           "name" : "Listing",
-          "run" : "ls -la .\nls -la ~\n"
+          "run" : "ls -la .\nls -la ~\nls -la /home/linuxbrew/.linuxbrew"
         },
         {
           "name" : "Set up default base tools",
