@@ -99,7 +99,7 @@
         },
         {
           "name" : "Set up Wine",
-          "if" : "steps.check_files.outputs.setup_wine == 'true'",
+          "if" : "steps.additional_flags.outputs.setup_wine == 'true'",
           "run" : "bash /usr/local/util_scripts/setup_wine.bash"
         },
         {
