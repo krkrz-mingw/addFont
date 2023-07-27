@@ -95,7 +95,7 @@
         {
           "name" : "Set up mingw-w64 for Clang",
           "if" : "matrix.platform.compiler == 'clang'",
-          "run" : "echo \"/opt/llvm-mingw/bin\" >> $GITHUB_PATH"
+          "run" : "bash /usr/local/util_scripts/setup_llvm_mingw.bash"
         },
         {
           "name" : "Compile project",
