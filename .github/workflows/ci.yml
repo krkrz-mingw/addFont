@@ -93,6 +93,16 @@
           }
         },
         {
+          "name" : "Read additional flags",
+          "id" : "additional_flags",
+          "run" : "if test -f ./.github/workflows_flags; then\ncat ./.github/workflows_flags >> $GITHUB_OUTPUT\nfi"
+        },
+        {
+          "name" : "Set up Wine",
+          "if" : "steps.check_files.outputs.setup_wine == 'true'",
+          "run" : "bash /usr/local/util_scripts/setup_wine.bash"
+        },
+        {
           "name" : "Set up mingw-w64 for Clang",
           "if" : "matrix.platform.compiler == 'clang'",
           "run" : "bash /usr/local/util_scripts/setup_llvm_mingw.bash"
