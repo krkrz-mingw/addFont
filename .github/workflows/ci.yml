@@ -80,7 +80,7 @@
           ]
         }
       },
-      "timeout-minutes" : 45,
+      "timeout-minutes" : 40,
       "env" : {
         "CMAKE_GENERATOR" : "Ninja"
       },
